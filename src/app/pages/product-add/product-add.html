@@ -1,0 +1,205 @@
+<div class="page-wrapper">
+  
+  <div class="top-bar">
+    <button class="btn-back">← Quay lại danh sách</button>
+  </div>
+
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Thêm Sản Phẩm</h2>
+      <p>Điền đầy đủ các thông tin bên dưới để tạo sản phẩm mới</p>
+    </div>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="styled-form">
+      
+      <div class="input-group">
+        <label for="name">Tên sản phẩm <span class="required">*</span></label>
+        <input type="text" id="name" formControlName="name" placeholder="VD: iPhone 15 Pro Max" />
+        <small class="error-msg" *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+          Tên sản phẩm không được để trống
+        </small>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label for="price">Giá bán (VNĐ)</label>
+          <div class="prefix-wrapper">
+            <span class="prefix">₫</span>
+            <input type="number" id="price" formControlName="price" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="quantity">Số lượng kho</label>
+          <input type="number" id="quantity" formControlName="quantity" placeholder="100" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="description">Mô tả chi tiết</label>
+        <textarea id="description" formControlName="description" rows="5" placeholder="Mô tả các đặc tính của sản phẩm..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel">Hủy bỏ</button>
+        <button type="submit" class="btn-submit" [disabled]="userForm.invalid">
+          Lưu sản phẩm
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<style>
+  /* Cài đặt chung */
+  .page-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+
+  .top-bar {
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+  }
+
+  .btn-back {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  /* Thẻ Card chứa Form */
+  .form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 40px;
+  }
+
+  .form-header {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 20px;
+  }
+
+  .form-header h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.5rem;
+  }
+
+  .form-header p {
+    color: #64748b;
+    margin: 8px 0 0 0;
+  }
+
+  /* Layout Form */
+  .input-group {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+  }
+
+  .required { color: #ef4444; }
+
+  /* Input & Textarea */
+  input, textarea {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #1e293b;
+    transition: all 0.2s;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Prefix cho ô Giá */
+  .prefix-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .prefix {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+    font-weight: bold;
+  }
+
+  .prefix-wrapper input {
+    padding-left: 35px;
+    width: 100%;
+  }
+
+  /* Button Actions */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .btn-submit {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-submit:hover:not(:disabled) { background-color: #2563eb; }
+  
+  .btn-submit:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+  }
+
+  .btn-cancel {
+    background-color: white;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btn-cancel:hover { background-color: #f8fafc; }
+
+  .error-msg {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
+</style>
