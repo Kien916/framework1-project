@@ -1,0 +1,26 @@
+<p>task works!</p>
+<a routerLink="task/add"></a>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Due Date</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>ACTION</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks()">
+            <td>{{task.id}}</td>
+            <td>{{task.title}}</td>
+            <td>{{task.dueDate}}</td>
+            <td>{{task.description}}</td>
+            <td>{{task.status}}</td>
+            <td>{{task.priority}}</td>
+            <td>
+                <button (click)="deleteTask(task)" > xoá</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
