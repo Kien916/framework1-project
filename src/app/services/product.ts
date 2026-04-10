@@ -26,4 +26,10 @@ export class productServices {
   createProduct(product:Omit<IProduct,'id'>){
     return this.http.post(API + "products",product)
   }
+  getProductById(id:number):Observable<IProduct>{
+    return this.http.get<IProduct>(API + 'products/' + id)
+  }
+  updateProduct(id:number, product:Omit<IProduct,'id'>){
+    return this.http.put(API + 'products/' + id, product)
+  }
 }

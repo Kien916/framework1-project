@@ -15,7 +15,7 @@
 <div class="">
     <label for="status">status</label>
     <input type="checkbox" id="status" formControlName="status">
-
+    <span>{{ userForm.get('status')?.value ? 'đã hoàn thành' : 'chưa hoàn thành' }}</span>
 </div>
 <div class="">
     <label for="priority">priority</label>

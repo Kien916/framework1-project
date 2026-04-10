@@ -1,4 +1,36 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin"
+    },
+    {
+      "email": "kientrungkien133@gmail.com",
+      "password": "$2a$10$4Z/w5TmUyxrsdPMi.rhQneqsRgjLq.cZ9ykgSrLKI4wBHt370cSK.",
+      "username": "kiendt91",
+      "id": 2
+    },
+    {
+      "email": "kien1@gmail.com",
+      "password": "$2a$10$c/5XDIPMlZEQMIu7jXxALuvMnKeFQnh3x765iAQo6BqhSEl1xg.mK",
+      "username": "kien912006",
+      "id": 3
+    },
+    {
+      "email": "kien2@gmail.com",
+      "password": "$2a$10$UkyReMa0MpF9Jvvh.RG.c.YB9dkOjDS3aB/n634kzJYTnTnzueHLG",
+      "username": "kien2",
+      "id": 4
+    },
+    {
+      "email": "kiendoan1@gmai.com",
+      "password": "$2a$10$Dp0c8enwxUGKzHcpA3TF1ufqtDDllE8stRcMJq.LsQSlkW7/Hwryu",
+      "username": "kiendt91",
+      "id": 5
+    }
+  ],
   "products": [
     {
       "id": 2,
@@ -43,11 +75,25 @@
       "id": 9
     },
     {
-      "name": "khoa hoc 1",
-      "price": 32,
-      "description": "khong",
-      "quantity": 98,
+      "name": "khoa hoc 2",
+      "price": 2,
+      "description": "khong co",
+      "quantity": 100,
       "id": 10
+    },
+    {
+      "name": "Kiên_Đoàn",
+      "price": 916,
+      "description": "ĐOÀN TRUNG KIÊN",
+      "quantity": 1,
+      "id": 11
+    },
+    {
+      "name": "Kiên_Đoàn",
+      "price": 916,
+      "description": "ĐOÀN TRUNG KIÊN",
+      "quantity": 1,
+      "id": 12
     }
   ],
   "tasks": [
@@ -74,6 +120,14 @@
       "status": true,
       "priority": "trungbinh",
       "id": 3
+    },
+    {
+      "title": "kkk91",
+      "dueDate": "2026-03-28",
+      "description": "mô tả 3",
+      "status": true,
+      "priority": "trungbinh",
+      "id": 4
     }
   ]
 }

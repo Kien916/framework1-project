@@ -20,7 +20,7 @@ loadTask() {
   this.taskService.fetchTask().subscribe((data: ITask[]) => {
     this.tasks.set(data);
   });
-}
+} 
 ngOnInit(){
   this.loadTask();
 }
