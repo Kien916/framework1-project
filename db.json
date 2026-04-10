@@ -29,6 +29,24 @@
       "password": "$2a$10$Dp0c8enwxUGKzHcpA3TF1ufqtDDllE8stRcMJq.LsQSlkW7/Hwryu",
       "username": "kiendt91",
       "id": 5
+    },
+    {
+      "email": "kienkien1@gmai.com",
+      "password": "$2a$10$ahqiV.ZcySPi6DH7rdP0XOnKeImD65eOsi.TvNFSiu54CgqNfWmKK",
+      "username": "kienkien1",
+      "id": 6
+    },
+    {
+      "email": "kienkien2@gmai.com",
+      "password": "$2a$10$C5MwAmK8GiBv//7Fau0NLeNxyTpewKto3ju47GSJXPVDRUYgnUnKy",
+      "username": "kienkien2",
+      "id": 7
+    },
+    {
+      "email": "kienkien3@gmail.com",
+      "password": "$2a$10$fBlGPD8OeoFQ.k7dl9XvmuWJuJ5LLJzo3EXtvqXTwczXtKfN/ZYoe",
+      "username": "kienkien3",
+      "id": 8
     }
   ],
   "products": [
@@ -94,6 +112,27 @@
       "description": "ĐOÀN TRUNG KIÊN",
       "quantity": 1,
       "id": 12
+    },
+    {
+      "name": "Kiên_Đoàn999",
+      "price": 999,
+      "description": "ko",
+      "quantity": 8,
+      "id": 13
+    },
+    {
+      "name": "Kiên_Đoàn999",
+      "price": 9990,
+      "description": "ko",
+      "quantity": 8,
+      "id": 14
+    },
+    {
+      "name": "khoa hoc 91",
+      "price": 12345,
+      "description": "kientrungdoan",
+      "quantity": 1,
+      "id": 15
     }
   ],
   "tasks": [
@@ -127,6 +166,24 @@
       "description": "mô tả 3",
       "status": true,
       "priority": "trungbinh",
+      "id": 4
+    }
+  ],
+  "event": [
+    {
+      "name": "event1",
+      "time": "2026-04-11",
+      "status": true,
+      "image": "khong",
+      "type": "xã hội",
+      "id": 2
+    },
+    {
+      "name": "event3",
+      "time": "2026-04-26",
+      "status": true,
+      "image": "khong",
+      "type": "giáo dục",
       "id": 4
     }
   ]

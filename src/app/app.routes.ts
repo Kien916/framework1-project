@@ -7,6 +7,10 @@ import { TaskAdd } from './ASM1/task-add/task-add';
 import { Register } from './pages/register/register';
 import { Login } from './pages/login/login';
 import { authGuard } from './guards/auth-guards';
+import {Events} from './ASM2/events/events';
+import { EventAdd } from './ASM2/event-add/event-add';
+import { EventEdit } from './ASM2/event-edit/event-edit';
+import { RegisterEvent } from './ASM2/register-event/register-event';
 export const routes: Routes = [
     {
         path:'product',
@@ -26,7 +30,6 @@ export const routes: Routes = [
     {
         path:'task',
         component:Task,
-        canActivate: [authGuard]
     },
     {
         path:"task/add",
@@ -40,7 +43,27 @@ export const routes: Routes = [
     {
         path:"login",
         component:Login
-    }
+    },
+    {
+        path:"register",
+        component:Register
+    },
+    {
+        path:"events",
+        component:Events,
+    },
+    {
+        path:"event-add",
+        component:EventAdd
+    },
+    {
+        path:"event-edit/:id",
+        component:EventEdit
+    },
+    {
+        path:"register-event",
+        component:RegisterEvent
+    },
    
 ];
 

@@ -1,0 +1,26 @@
+<p>events works!</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Image</th>
+        <th>Type</th>
+        <th>ACTION</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events()">
+            <td>{{event.id}}</td>
+            <td>{{event.name}}</td>
+            <td>{{event.time}}</td>
+            <td>{{event.status}}</td>
+            <td>{{event.image}}</td>
+            <td>{{event.type}}</td>
+            <td>
+                <a [routerLink]="['/event-edit', event.id]">Edit</a>
+                <button (click)="deleteEvent(event)">xoá</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

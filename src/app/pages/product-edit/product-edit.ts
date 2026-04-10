@@ -35,7 +35,6 @@ export class ProductEdit {
   }
   async onSubmit() {
     await this.productService.updateProduct(this.id, this.userForm.value).subscribe()
-
     this.navigation.navigate(['/products'])
   }
 }

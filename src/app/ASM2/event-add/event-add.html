@@ -1,0 +1,29 @@
+<p>event-add works!</p>
+<form action="" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<div class="">
+    <label for="name">name</label>
+    <input type="text" id="name" formControlName="name">
+</div>
+<div class="">
+    <label for="time">time</label>
+    <input type="date" id="time" formControlName="time">
+</div>
+<div class="">
+    <label for="status">status</label>
+    <input type="checkbox" id="status" formControlName="status">
+    <span>{{ userForm.get('status')?.value ? 'active' : 'inactive' }}</span>
+</div>
+<div class="">
+    <label for="image">image</label>
+    <input type="text" id="image" formControlName="image">
+</div>
+<div class="">
+    <label for="type">type</label>
+    <select name="type" id="type" formControlName="type">
+        <option value="kinh doanh">kinh doanh</option>
+        <option value="xã hội"> xã hội</option>
+        <option value="giáo dục">giáo dục</option>
+    </select>
+</div>
+<button type="submit">Add Task</button>
+</form>
